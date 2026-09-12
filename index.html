@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#083d73" />
+<title>Collège actif, avenir positif</title>
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="academy-mark"><span class="tricolor">▰</span><strong>ACADÉMIE<br>DE PARIS</strong><small>Liberté<br>Égalité<br>Fraternité</small></div>
+  <img src="logo-caap.png" alt="Collège actif, avenir positif" class="brand-logo" />
+  <nav>
+    <button class="nav-btn active" data-view="home">Accueil</button>
+    <button class="nav-btn" data-view="resources">Ressources</button>
+    <button class="nav-btn" data-view="favorites">Favoris</button>
+    <button class="nav-btn" data-view="about">À propos</button>
+  </nav>
+</header>
+
+<main>
+<section id="homeView" class="view active-view">
+  <section class="hero-banner-wrap" aria-label="Collège Actif, Avenir Positif">
+    <img src="assets/hero-home.png" alt="Collège Actif, Avenir Positif — Bouger, apprendre, s’épanouir" class="hero-banner" />
+  </section>
+
+  <section class="home-category-grid" id="categoryGrid"></section>
+  <section class="quick-actions">
+    <button data-quick="favorites"><span class="qa-emoji">♥</span><span>Mes favoris</span><b>›</b></button>
+    <button data-quick="ideas"><span class="qa-emoji bulb">●</span><span>Je cherche une idée</span><b>›</b></button>
+  </section>
+</section>
+
+<section id="resourcesView" class="view">
+  <div class="page-wrap">
+    <h2 class="page-title">Ressources</h2>
+    <div id="resourceTopics" class="resource-topics"></div>
+    <div id="resourceSection" class="resource-section hidden">
+      <div class="resource-section-head"><h3 id="resourceTitle"></h3><button id="closeTopic">Toutes les ressources</button></div>
+      <div id="resourceList" class="resource-list"></div>
+    </div>
+  </div>
+</section>
+
+<section id="favoritesView" class="view">
+  <div class="page-wrap">
+    <h2 class="page-title favorite-title">♥ <span>Mes favoris</span></h2>
+    <div id="favoriteList" class="resource-list favorites-grid"></div>
+  </div>
+</section>
+
+<section id="ideasView" class="view">
+  <div class="page-wrap">
+    <h2 class="page-title">Je cherche une idée</h2>
+    <div id="ideaButtons" class="idea-grid"></div>
+    <div id="ideaResults" class="resource-list"></div>
+  </div>
+</section>
+
+<section id="aboutView" class="view">
+  <div class="about-wrap">
+    <img src="logo-caap.png" alt="Logo Collège actif, avenir positif" class="about-logo" />
+    <div class="about-slogan">Bouger, apprendre, s’épanouir !</div>
+    <div class="about-box">
+      <h2>Collège actif, avenir positif</h2>
+      <p>Un dispositif pour promouvoir l’activité physique, la santé, le bien-être et la réussite scolaire dans les collèges de l’académie de Paris.</p>
+      <hr>
+      <p><strong>Piloté par Bruno Tréhet</strong><br>IA-IPR EPS – Académie de Paris</p>
+    </div>
+    <p class="credit">Un outil réalisé par Sophie Cheyrou<br>Professeur d’EPS</p>
+  </div>
+</section>
+</main>
+
+<div id="modal" class="modal" aria-hidden="true"><div class="modal-panel"><button class="modal-close" id="modalClose" aria-label="Fermer">×</button><div id="modalBody"></div></div></div>
+
+<footer>Académie de Paris <span>|</span> Collège actif, avenir positif <span>|</span> Mentions légales <span>|</span> Contact</footer>
+<script src="config.js"></script>
+<script src="photos.js"></script>
+<script src="resources.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

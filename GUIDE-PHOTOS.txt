@@ -1,0 +1,57 @@
+CHANGER LES PHOTOS DE LA PWA
+============================
+
+La PWA a été préparée pour que les photos puissent être changées très facilement.
+
+MÉTHODE LA PLUS SIMPLE
+----------------------
+1. Ouvrir le dossier : assets
+2. Remplacer l'image souhaitée par votre nouvelle photo.
+3. Conserver EXACTEMENT le même nom de fichier.
+4. Envoyer les fichiers modifiés sur GitHub.
+
+PAGE D'ACCUEIL
+--------------
+hero-home.png              = grand bandeau de la page d'accueil
+home-projet.jpg            = Le projet
+home-ressources.jpg        = Ressources & comprendre
+home-enseignements.jpg     = Agir dans les enseignements
+home-amenager.jpg          = Aménager l'établissement
+home-viescolaire.jpg       = Vie scolaire & climat scolaire
+home-eps.jpg               = EPS & activité physique
+home-semaines.jpg          = Semaines & temps forts
+home-personnels.jpg        = Personnels
+
+PAGE RESSOURCES
+---------------
+res-academiques.jpg              = Ressources académiques
+res-ecole-sante.jpg              = École promotrice de santé
+res-activite-sedentarite.jpg     = Activité physique, santé et sédentarité
+res-apprendre.jpg                = Apprendre et bouger
+res-videos.jpg                   = Vidéos & podcasts
+res-international.jpg            = Inspirations internationales
+res-interdisciplinarite.jpg      = Interdisciplinarité
+res-bouger-classe.jpg            = Bouger en classe
+res-bienetre.jpg                 = Bien-être et rythmes
+res-espaces-pedagogiques.jpg     = Espaces pédagogiques
+res-circulation.jpg              = Espaces de circulation
+res-exterieurs.jpg               = Espaces extérieurs
+res-restauration.jpg             = Restauration et pauses
+res-viescolaire.jpg              = Vie scolaire et climat scolaire
+res-semaines.jpg                 = Semaines & temps forts
+res-eps.jpg                      = EPS et activité physique
+res-personnels.jpg               = Personnels
+res-pilotage.jpg                 = Pilotage et communication
+res-outils.jpg                   = Outils et documents
+res-evaluation.jpg               = Évaluer
+
+AUTRE POSSIBILITÉ
+-----------------
+Le fichier photos.js centralise tous les chemins des images.
+Vous pouvez y remplacer un chemin local par une autre image ou par une URL https://...
+
+CONSEILS
+--------
+- Miniatures : format paysage 16:9 ou proche, idéalement 1200 x 675 px.
+- Bandeau : conserver les proportions du fichier hero-home.png (environ 2,55:1).
+- Formats conseillés : JPG pour les photos, PNG pour les visuels avec texte/logo.
