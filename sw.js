@@ -1,4 +1,4 @@
-const CACHE='caap-v5-20260912';
+const CACHE='caap-v7-20260912';
 const CORE=['./','./index.html','./styles.css','./app.js','./resources.js','./photos.js','./config.js','./manifest.webmanifest','./logo-caap.png','./assets/logo-academie-paris.jpg','./assets/hero-home.png'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

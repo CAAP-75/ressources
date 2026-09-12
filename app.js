@@ -161,7 +161,7 @@ function showProject(){
   document.getElementById('resourceGroups').classList.add('hidden');
   document.getElementById('groupSection').classList.remove('hidden');
   document.getElementById('groupTitle').textContent='Le projet';
-  document.getElementById('groupSubtitle').textContent='Calendrier, établissements engagés, interlocuteurs et documents de référence.';
+  document.getElementById('groupSubtitle').textContent='Présentation du dispositif et calendrier.';
   const list=resources.filter(r=>sectionFor(r)==='Le projet');
   const c=document.getElementById('groupContent');
   c.innerHTML=`<section class="section-block"><div class="resource-list">${list.map(cardHtml).join('')}</div></section>`;
