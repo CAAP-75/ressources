@@ -4,15 +4,19 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#083d73" />
+<meta name="description" content="Collège actif, avenir positif — ressources pour promouvoir l’activité physique, la santé, le bien-être et la réussite scolaire." />
 <title>Collège actif, avenir positif</title>
 <link rel="manifest" href="manifest.webmanifest" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header class="topbar">
-  <div class="academy-mark"><span class="tricolor">▰</span><strong>ACADÉMIE<br>DE PARIS</strong><small>Liberté<br>Égalité<br>Fraternité</small></div>
-  <img src="logo-caap.png" alt="Collège actif, avenir positif" class="brand-logo" />
-  <nav>
+  <button class="brand-home" data-view="home" aria-label="Retour à l’accueil">
+    <img src="assets/logo-academie-paris.jpg" alt="Académie de Paris" class="academy-logo" />
+    <span class="brand-divider" aria-hidden="true"></span>
+    <img src="logo-caap.png" alt="Collège actif, avenir positif" class="brand-logo" />
+  </button>
+  <nav aria-label="Navigation principale">
     <button class="nav-btn active" data-view="home">Accueil</button>
     <button class="nav-btn" data-view="resources">Ressources</button>
     <button class="nav-btn" data-view="favorites">Favoris</button>
@@ -26,34 +30,48 @@
     <img src="assets/hero-home.png" alt="Collège Actif, Avenir Positif — Bouger, apprendre, s’épanouir" class="hero-banner" />
   </section>
 
+  <section class="intro-strip">
+    <button class="project-link" id="discoverProject">Découvrir le dispositif CAAP <span>→</span></button>
+    <p>Choisissez une entrée pour accéder directement aux ressources utiles à votre établissement.</p>
+  </section>
+
   <section class="home-category-grid" id="categoryGrid"></section>
+
   <section class="quick-actions">
     <button data-quick="favorites"><span class="qa-emoji">♥</span><span>Mes favoris</span><b>›</b></button>
-    <button data-quick="ideas"><span class="qa-emoji bulb">●</span><span>Je cherche une idée</span><b>›</b></button>
+    <button data-quick="ideas"><span class="qa-emoji bulb">💡</span><span>Je cherche une idée</span><b>›</b></button>
   </section>
 </section>
 
 <section id="resourcesView" class="view">
   <div class="page-wrap">
-    <h2 class="page-title">Ressources</h2>
-    <div id="resourceTopics" class="resource-topics"></div>
-    <div id="resourceSection" class="resource-section hidden">
-      <div class="resource-section-head"><h3 id="resourceTitle"></h3><button id="closeTopic">Toutes les ressources</button></div>
-      <div id="resourceList" class="resource-list"></div>
+    <div class="page-heading">
+      <h2 class="page-title">Ressources</h2>
+      <p>8 entrées simples pour parcourir l’ensemble des contenus du dispositif.</p>
     </div>
+    <div id="resourceGroups" class="resource-groups"></div>
+    <section id="groupSection" class="group-section hidden">
+      <div class="group-head">
+        <button id="backToGroups" class="back-link">← Les 8 entrées</button>
+        <h2 id="groupTitle"></h2>
+        <p id="groupSubtitle"></p>
+      </div>
+      <div id="groupContent"></div>
+    </section>
   </div>
 </section>
 
 <section id="favoritesView" class="view">
   <div class="page-wrap">
     <h2 class="page-title favorite-title">♥ <span>Mes favoris</span></h2>
-    <div id="favoriteList" class="resource-list favorites-grid"></div>
+    <div id="favoriteList" class="resource-list"></div>
   </div>
 </section>
 
 <section id="ideasView" class="view">
-  <div class="page-wrap">
+  <div class="page-wrap narrow">
     <h2 class="page-title">Je cherche une idée</h2>
+    <p class="idea-intro">Choisissez un besoin : la PWA vous propose directement des ressources correspondantes.</p>
     <div id="ideaButtons" class="idea-grid"></div>
     <div id="ideaResults" class="resource-list"></div>
   </div>
@@ -74,7 +92,12 @@
 </section>
 </main>
 
-<div id="modal" class="modal" aria-hidden="true"><div class="modal-panel"><button class="modal-close" id="modalClose" aria-label="Fermer">×</button><div id="modalBody"></div></div></div>
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="modal-panel">
+    <button class="modal-close" id="modalClose" aria-label="Fermer">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
 
 <footer>Académie de Paris <span>|</span> Collège actif, avenir positif <span>|</span> Mentions légales <span>|</span> Contact</footer>
 <script src="config.js"></script>
