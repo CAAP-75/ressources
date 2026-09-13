@@ -30,34 +30,28 @@
     <img src="assets/hero-home.png" alt="Collège Actif, Avenir Positif — Bouger, apprendre, s’épanouir" class="hero-banner" />
   </section>
 
-  <section class="intro-strip">
+  <section class="intro-strip home-intro">
     <button class="project-link" id="discoverProject">Découvrir le dispositif CAAP <span>→</span></button>
-    <p>Choisissez une entrée pour accéder directement aux ressources utiles à votre établissement.</p>
+    <p>Choisissez votre besoin pour accéder directement aux ressources correspondantes.</p>
   </section>
 
-  <section class="home-category-grid" id="categoryGrid"></section>
+  <section class="home-intent-grid" id="homeIntentGrid"></section>
 
-  <section class="quick-actions">
-    <button data-quick="favorites"><span class="qa-emoji">♥</span><span>Mes favoris</span><b>›</b></button>
-    <button data-quick="ideas"><span class="qa-emoji bulb">💡</span><span>Je cherche une idée</span><b>›</b></button>
+  <section class="home-idea-cta">
+    <button data-quick="ideas"><span class="qa-emoji bulb">💡</span><span><strong>Je cherche une idée</strong><small>Trouver rapidement une action adaptée à mon établissement</small></span><b>›</b></button>
   </section>
 </section>
 
 <section id="resourcesView" class="view">
-  <div class="page-wrap">
-    <div class="page-heading">
-      <h2 class="page-title">Ressources</h2>
-      <p>8 entrées simples pour parcourir l’ensemble des contenus du dispositif.</p>
-    </div>
-    <div id="resourceGroups" class="resource-groups"></div>
-    <section id="groupSection" class="group-section hidden">
-      <div class="group-head">
-        <button id="backToGroups" class="back-link">← Les 8 entrées</button>
-        <h2 id="groupTitle"></h2>
-        <p id="groupSubtitle"></p>
+  <div class="page-wrap resources-clean-wrap">
+    <div class="page-heading resources-clean-heading">
+      <div>
+        <h2 class="page-title">Ressources</h2>
+        <p id="resourcesSubtitle">Toutes les ressources du dispositif, classées selon vos besoins.</p>
       </div>
-      <div id="groupContent"></div>
-    </section>
+      <button id="showAllResources" class="show-all-resources hidden">Voir toutes les ressources</button>
+    </div>
+    <div id="resourcesContent" class="resources-content"></div>
   </div>
 </section>
 
@@ -79,15 +73,56 @@
 
 <section id="aboutView" class="view">
   <div class="about-wrap">
-    <img src="logo-caap.png" alt="Logo Collège actif, avenir positif" class="about-logo" />
+    <img src="logo-caap.png" alt="Logo officiel Collège actif, avenir positif" class="about-logo" />
     <div class="about-slogan">Bouger, apprendre, s’épanouir !</div>
-    <div class="about-box">
+    <div class="about-box about-box-wide">
       <h2>Collège actif, avenir positif</h2>
-      <p>Un dispositif pour promouvoir l’activité physique, la santé, le bien-être et la réussite scolaire dans les collèges de l’académie de Paris.</p>
+      <p><strong>Collège actif, avenir positif</strong> est un dispositif de l’Académie de Paris qui vise à faire de l’activité physique, de la lutte contre la sédentarité et du bien-être des leviers de santé, d’apprentissage, de climat scolaire et de réussite.</p>
+      <p>Il accompagne les collèges dans la mise en œuvre d’actions concrètes : pratiques pédagogiques actives, aménagement des espaces, EPS et activité physique, temps forts, mobilisation des personnels, pilotage collectif et évaluation.</p>
+      <p>Cette PWA rassemble les ressources, exemples et outils du dispositif afin de faciliter leur accès par les équipes de direction et les communautés éducatives.</p>
       <hr>
-      <p><strong>Piloté par Bruno Tréhet</strong><br>IA-IPR EPS – Académie de Paris</p>
+      <p><strong>Pilotage : Bruno Tréhet</strong><br>IA-IPR EPS – Académie de Paris</p>
     </div>
-    <p class="credit">Un outil réalisé par Sophie Cheyrou<br>Professeur d’EPS</p>
+    <p class="credit">Outil réalisé par Sophie Cheyrou, professeur d’EPS.</p>
+  </div>
+</section>
+
+<section id="legalView" class="view">
+  <div class="page-wrap legal-wrap">
+    <button class="back-link" data-view="home">← Retour à l’accueil</button>
+    <h2 class="page-title">Mentions légales</h2>
+    <section class="legal-card">
+      <h3>Éditeur</h3>
+      <p><strong>Académie de Paris – Rectorat de Paris</strong><br>12 boulevard d’Indochine, 75019 Paris<br>Tél. : 01 44 62 40 40</p>
+      <p>Responsable éditorial du dispositif : <strong>Bruno Tréhet, IA-IPR EPS – Académie de Paris</strong>.</p>
+    </section>
+    <section class="legal-card">
+      <h3>Direction de la publication</h3>
+      <p>Julie Benetti, rectrice de la région académique Île-de-France, rectrice de l’académie de Paris, chancelière des universités de Paris et d’Île-de-France.</p>
+    </section>
+    <section class="legal-card">
+      <h3>Hébergement</h3>
+      <p>Cette application est publiée via <strong>GitHub Pages</strong>, service d’hébergement de pages web statiques proposé par GitHub. GitHub peut enregistrer l’adresse IP des visiteurs à des fins de sécurité conformément à sa propre politique de confidentialité.</p>
+    </section>
+    <section class="legal-card">
+      <h3>Données personnelles et favoris</h3>
+      <p>La PWA ne demande pas de création de compte et ne collecte directement aucune donnée nominative. Les favoris sont enregistrés localement dans le navigateur de l’utilisateur (stockage local) et ne sont pas transmis par l’application.</p>
+      <p>Les liens vers des services externes (sites institutionnels, Google Drive, vidéos, plateformes de ressources, etc.) renvoient vers des services disposant de leurs propres politiques de confidentialité et conditions d’utilisation.</p>
+    </section>
+    <section class="legal-card">
+      <h3>Propriété intellectuelle</h3>
+      <p>Les contenus institutionnels de l’Académie de Paris et les ressources de tiers restent soumis à leurs droits respectifs. Toute reproduction ou réutilisation doit respecter les mentions de source, les droits d’auteur et, le cas échéant, les conditions fixées par les auteurs ou éditeurs des ressources.</p>
+      <p>Le logo de l’Académie de Paris et le logo « Collège actif, avenir positif » sont utilisés dans le cadre autorisé du dispositif.</p>
+    </section>
+    <section class="legal-card">
+      <h3>Responsabilité</h3>
+      <p>Les ressources sont proposées à des fins d’information et d’accompagnement pédagogique. Les liens externes peuvent évoluer ou devenir indisponibles. L’Académie de Paris ne saurait être tenue responsable du contenu de sites tiers.</p>
+    </section>
+    <section class="legal-card">
+      <h3>Contact</h3>
+      <p>Pour toute question relative au dispositif, vous pouvez vous adresser à l’Inspection pédagogique régionale EPS de l’Académie de Paris ou utiliser l’espace de contact institutionnel de l’Académie de Paris.</p>
+      <p><a href="https://www.ac-paris.fr/" target="_blank" rel="noopener">Accéder au site de l’Académie de Paris ↗</a></p>
+    </section>
   </div>
 </section>
 </main>
@@ -99,7 +134,11 @@
   </div>
 </div>
 
-<footer>Académie de Paris <span>|</span> Collège actif, avenir positif <span>|</span> Mentions légales <span>|</span> Contact</footer>
+<footer>
+  Académie de Paris <span>|</span> Collège actif, avenir positif <span>|</span>
+  <button class="footer-link" data-view="legal">Mentions légales</button> <span>|</span>
+  <a class="footer-link" href="https://www.ac-paris.fr/" target="_blank" rel="noopener">Contact</a>
+</footer>
 <script src="config.js"></script>
 <script src="photos.js"></script>
 <script src="resources.js"></script>
